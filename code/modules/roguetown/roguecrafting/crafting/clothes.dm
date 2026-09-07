@@ -159,24 +159,60 @@
 	verbage_simple = "tied"
 	verbage = "ties"
 
-/datum/crafting_recipe/roguetown/survival/flowercrown_thorn
-	name = "thorny crown"
-	category = "Clothes"
-	result = /obj/item/flowercrown/thorny
-	reqs = list(
-		/obj/item/natural/thorn = 4,
-		/obj/item/natural/fibers = 2,
-		)
-	craftdiff = 0
-	verbage_simple = "tied"
-	verbage = "ties"
-
 /datum/crafting_recipe/roguetown/survival/flowercrown_salvia
 	name = "salvia crown"
 	category = "Clothes"
 	result = /obj/item/flowercrown/salvia
 	reqs = list(
 		/obj/item/alch/salvia = 4,
+		/obj/item/natural/fibers = 2,
+		)
+	craftdiff = 0
+	verbage_simple = "tied"
+	verbage = "ties"
+
+/datum/crafting_recipe/roguetown/survival/flowercrown_matricaria
+	name = "matricaria crown"
+	category = "Clothes"
+	result = /obj/item/flowercrown/matricaria
+	reqs = list(
+		/obj/item/alch/matricaria = 4,
+		/obj/item/natural/fibers = 2,
+		)
+	craftdiff = 0
+	verbage_simple = "tied"
+	verbage = "ties"
+
+/datum/crafting_recipe/roguetown/survival/flowercrown_calendula
+	name = "calendula crown"
+	category = "Clothes"
+	result = /obj/item/flowercrown/calendula
+	reqs = list(
+		/obj/item/alch/calendula = 4,
+		/obj/item/natural/fibers = 2,
+		)
+	craftdiff = 0
+	verbage_simple = "tied"
+	verbage = "ties"
+
+/datum/crafting_recipe/roguetown/survival/flowercrown_manabloom
+	name = "manabloom crown"
+	category = "Clothes"
+	result = /obj/item/flowercrown/manabloom
+	reqs = list(
+		/obj/item/reagent_containers/food/snacks/grown/manabloom = 4,
+		/obj/item/natural/fibers = 2,
+		)
+	craftdiff = 0
+	verbage_simple = "tied"
+	verbage = "ties"
+
+/datum/crafting_recipe/roguetown/survival/flowercrown_thorn
+	name = "thorny crown"
+	category = "Clothes"
+	result = /obj/item/flowercrown/thorny
+	reqs = list(
+		/obj/item/natural/thorn = 4,
 		/obj/item/natural/fibers = 2,
 		)
 	craftdiff = 0
