@@ -175,18 +175,18 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/update_mutant_colors = TRUE
 
 	var/headshot_link
-	
+
 	var/nsfw_headshot_link
-	
+
 	var/ooc_extra_link
 	var/ooc_extra
 	var/list/descriptor_entries = list()
 	var/list/custom_descriptors = list()
 
-	var/char_accent = "No accent"	
+	var/char_accent = "No accent"
 
 	// PATREON
-	// Vrell - I fucking hate how inconsistent the variable style is for this shit. underscores? all lowercase? camelcase? 
+	// Vrell - I fucking hate how inconsistent the variable style is for this shit. underscores? all lowercase? camelcase?
 	var/patreon_say_color = "ff7a05"
 	var/patreon_say_color_enabled = FALSE
 	// END PATREON
@@ -201,7 +201,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 
 	var/flavortext
 	var/flavortext_display
-	
+
 	var/is_legacy = FALSE
 
 	var/ooc_notes
@@ -252,9 +252,9 @@ GLOBAL_LIST_EMPTY(chosen_names)
 
 
 
-	
 
-	
+
+
 	if(!charflaw)
 		charflaw = pick(GLOB.character_flaws)
 		charflaw = GLOB.character_flaws[charflaw]
@@ -295,7 +295,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	if(virtue_origin.uniquefaith)
 		selected_patron = GLOB.patronlist[virtue_origin.uniquefaith[1].godhead]
 	else
-		selected_patron = /datum/patron/divine/astrata
+		selected_patron = GLOB.patronlist[/datum/patron/divine/astrata]
 
 #define APPEARANCE_CATEGORY_COLUMN "<td valign='top' width='14%'>"
 #define MAX_MUTANT_ROWS 4
@@ -402,7 +402,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			dat += "<BR>"
 			dat += "<b>Nickname:</b> "
 			dat += "<a href='?_src_=prefs;preference=nickname;task=input'>[nickname]</a><BR>"
-	
+
 			// LETHALSTONE EDIT BEGIN: add pronoun prefs
 			dat += "<b>Pronouns:</b> <a href='?_src_=prefs;preference=pronouns;task=input'>[pronouns]</a><BR>"
 			// LETHALSTONE EDIT END
@@ -739,7 +739,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			dat += "<b>Play Admin MIDIs:</b> <a href='?_src_=prefs;preference=hear_midis'>[(toggles & SOUND_MIDI) ? "Enabled":"Disabled"]</a><br>"
 			dat += "<b>Play Lobby Music:</b> <a href='?_src_=prefs;preference=lobby_music'>[(toggles & SOUND_LOBBY) ? "Enabled":"Disabled"]</a><br>"
 			dat += "<b>See Pull Requests:</b> <a href='?_src_=prefs;preference=pull_requests'>[(chat_toggles & CHAT_PULLR) ? "Enabled":"Disabled"]</a><br>"
-	
+
 			dat += "<br>"
 
 
@@ -1327,7 +1327,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 /datum/preferences/proc/process_link(mob/user, list/href_list)
 	if(!user?.client || !parent)
 		return FALSE
-		
+
 	if(href_list["bancheck"])
 		var/list/ban_details = is_banned_from_with_details(user.ckey, user.client.address, user.client.computer_id, href_list["bancheck"])
 		var/admin = FALSE
@@ -1893,7 +1893,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 					var/list/dat = list()
 					dat +="Skin color codes reference list<br>"
 					dat += "<br>"
-					for(var/tone in pref_species.get_skin_list_tooltip()) 
+					for(var/tone in pref_species.get_skin_list_tooltip())
 						dat += "[tone]<br>"
 					var/datum/browser/popup = new(user, "Formatting Help", nwidth = 300, nheight = 500)
 					popup.set_content(dat.Join())
@@ -2074,7 +2074,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 							ooc_extra += "<br>"
 							ooc_extra += "<img src='[ooc_extra_link]'/>"
 							info = "an embedded image."
-						else 
+						else
 							switch(extension)
 								if("mp4")
 									ooc_extra = "<br>"
@@ -2230,7 +2230,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 
 				if("update_mutant_colors")
 					update_mutant_colors = !update_mutant_colors
-				
+
 				if("dnr")
 					dnr_pref =!dnr_pref
 
@@ -2872,7 +2872,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 		return loadout_2_hex
 	if (loadout3 && (item_path == loadout3.path) && loadout_3_hex)
 		return loadout_3_hex
-	
+
 	return FALSE
 
 /datum/preferences/proc/copy_to(mob/living/carbon/human/character, icon_updates = 1, roundstart_checks = TRUE, character_setup = FALSE, antagonist = FALSE)
@@ -2985,7 +2985,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 
 	character.ooc_notes_display = ooc_notes_display
 
-	
+
 	character.rumour = rumour
 	character.rumour_display = rumour_display
 	character.gossip = gossip
@@ -3021,7 +3021,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 		character.update_body_parts(redraw = TRUE)
 
 	character.char_accent = char_accent
-	
+
 	if(culinary_preferences)
 		apply_culinary_preferences(character)
 
