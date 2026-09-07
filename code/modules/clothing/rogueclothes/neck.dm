@@ -413,25 +413,39 @@
 	desc = "Surely this one endures?"
 	icon_state = "psycross_a"
 
+/obj/item/clothing/neck/roguetown/zcross
+	name = ""
+	desc = "You are not supposed to see this item. Notify maintainers about this!"
+	slot_flags = ITEM_SLOT_NECK|ITEM_SLOT_HIP|ITEM_SLOT_WRISTS|ITEM_SLOT_RING
+	resistance_flags = FIRE_PROOF
+	anvilrepair = /datum/skill/craft/armorsmithing
+	grid_width = 32
+	grid_height = 32
+
 /obj/item/clothing/neck/roguetown/zcross/aalloy
 	name = "decrepit zcross"
 	desc = "A symbol of progress from an era that had reason to believe in it."
 	icon_state = "zcross_a"
-	slot_flags = ITEM_SLOT_NECK|ITEM_SLOT_HIP|ITEM_SLOT_WRISTS|ITEM_SLOT_RING
 
 /obj/item/clothing/neck/roguetown/zcross/iron
 	name = "inverted psycross"
 	desc = "A symbol of progress from an era that had reason to believe in it."
 	icon_state = "zcross_iron"
-	resistance_flags = FIRE_PROOF
-	slot_flags = ITEM_SLOT_NECK|ITEM_SLOT_HIP|ITEM_SLOT_WRISTS|ITEM_SLOT_RING
-	anvilrepair = /datum/skill/craft/armorsmithing
-	grid_width = 32
-	grid_height = 32
 
-/obj/item/clothing/neck/roguetown/zcross/iron/New(loc, ...)
-	. = ..()
-	name = pick("inverted psycross", "psycross")
+/obj/item/clothing/neck/roguetown/zcross/matthios
+	name = "amulet of Matthios"
+	desc = "He was but one flame in the dark. Together, his flock shall outblaze the tyrant sun."
+	icon_state = "matthios"
+
+/obj/item/clothing/neck/roguetown/zcross/graggar
+	name = "amulet of Graggar"
+	desc = "Blood leads only to glory, and violence begets divinity. Nothing less. Conquest is simply another name for victory."
+	icon_state = "graggar"
+
+/obj/item/clothing/neck/roguetown/zcross/baotha
+	name = "amulet of Baotha"
+	desc = "A hollow promise rendered in gold. It weighs heavy with the memory of sweet wine turned to poison, and the comfort of a sorrow that refuses to fade."
+	icon_state = "baotha"
 
 /obj/item/clothing/neck/roguetown/psicross/astrata
 	name = "amulet of Astrata"
@@ -792,16 +806,6 @@
 		user.change_stat("fortune", -1) //how much luck stat taken away when unequipped
 		goodluckactivated = FALSE
 	return
-
-/obj/item/clothing/neck/roguetown/zcross/matthios
-	name = "amulet of matthios"
-	desc = "He was but one flame in the dark. Together, his flock shall outblaze the tyrant sun."
-	icon_state = "robbinya"
-	resistance_flags = FIRE_PROOF
-	slot_flags = ITEM_SLOT_NECK|ITEM_SLOT_HIP|ITEM_SLOT_WRISTS|ITEM_SLOT_RING
-	anvilrepair = /datum/skill/craft/armorsmithing
-	grid_width = 32
-	grid_height = 32
 
 /obj/item/clothing/neck/roguetown/carved
 	name = "carved amulet"

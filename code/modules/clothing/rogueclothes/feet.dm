@@ -159,6 +159,14 @@
 	item_state = "sandals"
 	sewrepair = TRUE
 
+/obj/item/clothing/shoes/roguetown/sandals/tall_sandals
+	name = "tall sandals"
+	desc = "Delicate sandals of gleaming leather, their slender straps rising in graceful spirals to embrace the ankle and shin."
+	icon_state = "tall_sandals"
+	item_state = "tall_sandals"
+	salvage_result = /obj/item/natural/hide/cured
+	salvage_amount = 1
+
 /obj/item/clothing/shoes/roguetown/sandals/aalloy
 	name = "decrepit sandals"
 	desc = "Surely Psydon himself could've worn these sandals."
