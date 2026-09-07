@@ -70,7 +70,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/gender = MALE					//gender of character (well duh) (LETHALSTONE EDIT: this no longer references anything but whether the masculine or feminine model is used)
 	var/pronouns = HE_HIM				// LETHALSTONE EDIT: character's pronouns (well duh)
 	var/voice_type = VOICE_TYPE_MASC	// LETHALSTONE EDIT: the type of soundpack the mob should use
-	var/datum/statpack/statpack	= new /datum/statpack/wildcard/fated // LETHALSTONE EDIT: the statpack we're giving our char instead of racial bonuses
+	var/datum/statpack/statpack	= new /datum/statpack/wildcard/boring // LETHALSTONE EDIT: the statpack we're giving our char instead of racial bonuses
 	var/datum/virtue/virtue = new /datum/virtue/none // LETHALSTONE EDIT: the virtue we get for not picking a statpack
 	var/datum/virtue/virtuetwo = new /datum/virtue/none
 	var/datum/virtue/virtue_origin = new /datum/virtue/none
@@ -441,7 +441,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			dat += "[virtue_origin.extra_language ? "<b>Free Language: </b>" : "<s><b>Free Language:</b></s> "]<a href='?_src_=prefs;preference=extra_language;task=input'>[lang_output]</a><BR>"
 
 			// LETHALSTONE EDIT BEGIN: add statpack selection
-			dat += "<b>Statpack:</b> <a href='?_src_=prefs;preference=statpack;task=input'>[statpack.name]</a><BR>"
+			dat += "<b>Upbringing:</b> <a href='?_src_=prefs;preference=statpack;task=input'>[statpack.name]</a><BR>"
 			dat += "<BR>"
 //			dat += "<a href='?_src_=prefs;preference=species;task=random'>Random Species</A> "
 //			dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_SPECIES]'>Always Random Species: [(randomise[RANDOM_SPECIES]) ? "Yes" : "No"]</A><br>"
@@ -478,9 +478,9 @@ GLOBAL_LIST_EMPTY(chosen_names)
 //				dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_AGE_ANTAG]'>When Antagonist: [(randomise[RANDOM_AGE_ANTAG]) ? "Yes" : "No"]</A>"
 
 //			dat += "<b><a href='?_src_=prefs;preference=name;task=random'>Random Name</A></b><BR>"
-			dat += "<b>Virtue:</b> <a href='?_src_=prefs;preference=virtue;task=input'>[virtue]</a><BR>"
-			if(statpack.name == "Virtuous")
-				dat += "<b>Second Virtue:</b> <a href='?_src_=prefs;preference=virtuetwo;task=input'>[virtuetwo]</a><BR>"
+			dat += "<b>Talent:</b> <a href='?_src_=prefs;preference=virtue;task=input'>[virtue]</a><BR>"
+			if(statpack.name == "Talented")
+				dat += "<b>Second Talent:</b> <a href='?_src_=prefs;preference=virtuetwo;task=input'>[virtuetwo]</a><BR>"
 			dat += "<b>Vice:</b> <a href='?_src_=prefs;preference=charflaw;task=input'>[charflaw]</a><BR>"
 			var/datum/faith/selected_faith = GLOB.faithlist[selected_patron?.associated_faith]
 			dat += "<b>Faith:</b> <a href='?_src_=prefs;preference=faith;task=input'>[selected_faith?.name || "FUCK!"]</a><BR>"
@@ -1007,7 +1007,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 					else
 						name += charflaw.name
 				if(!isnull(name))
-					HTML += "<font color='#a561a5'>[used_name] (Disallowed by Virtues / Vice: [name])</font></td> <td> </td></tr>"
+					HTML += "<font color='#a561a5'>[used_name] (Disallowed by Talents / Vice: [name])</font></td> <td> </td></tr>"
 			if(length(job.virtue_restrictions))
 				var/name
 				if(virtue.type in job.virtue_restrictions)
@@ -1019,7 +1019,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 					else
 						name = virtuetwo.name
 				if(!isnull(name))
-					HTML += "<font color='#a59461'>[used_name] (Disallowed by Virtue: [name])</font></td> <td> </td></tr>"
+					HTML += "<font color='#a59461'>[used_name] (Disallowed by Talent: [name])</font></td> <td> </td></tr>"
 					continue
 			if(length(job.virtue_restrictions))
 				var/name
@@ -1646,10 +1646,10 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 
 						statpacks_available = sort_list(statpacks_available)
 
-					var/statpack_input = tgui_input_list(user, "How shall your strengths manifest?", "STATPACK", statpacks_available, statpack)
+					var/statpack_input = tgui_input_list(user, "What was your childhood like?", "UPBRINGING", statpacks_available, statpack)
 					if (statpack_input)
 						var/datum/statpack/statpack_chosen = statpacks_available[statpack_input]
-						if(statpack.name == "Virtuous") // Going OFF of virtuous
+						if(statpack.name == "Talented") // Going OFF of talented
 							if(is_type_in_list(virtuetwo, virtue.required_virtues))
 								virtue = GLOB.virtues[/datum/virtue/none]
 							var/temp_bodysize = BODY_SIZE_NORMAL
@@ -1660,8 +1660,8 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 						statpack = statpack_chosen
 						to_chat(user, "<font color='purple'>[statpack.name]</font>")
 						to_chat(user, "<font color='purple'>[statpack.description_string()]</font>")
-						/* also, unset our virtue if we're not a virtuous statpack.
-						if (!istype(statpack, /datum/statpack/wildcard/virtuous) && virtue.type != /datum/virtue/none)
+						/* also, unset our virtue if we're not a talented statpack.
+						if (!istype(statpack, /datum/statpack/wildcard/talented) && virtue.type != /datum/virtue/none)
 							virtue = new /datum/virtue/none
 							to_chat(user, span_info("Your virtue has been removed due to taking a stat-altering statpack.")) */
 				// LETHALSTONE EDIT: add pronouns
@@ -2256,7 +2256,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 							if((pref_species.type in V.races))
 								continue
 						virtue_choices[V.name] = V
-					var/result = tgui_input_list(user, "What strength shall you wield?", "VIRTUES",virtue_choices)
+					var/result = tgui_input_list(user, "What sets you apart from others?", "TALENTS",virtue_choices)
 
 					if (result)
 						var/datum/virtue/virtue_chosen = virtue_choices[result]
@@ -2296,7 +2296,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 							if((pref_species.type in V.races))
 								continue
 						virtue_choices[V.name] = V
-					var/result = tgui_input_list(user, "What strength shall you wield?", "VIRTUES",virtue_choices)
+					var/result = tgui_input_list(user, "What sets you apart from others?", "TALENTS",virtue_choices)
 
 					if (result)
 						var/datum/virtue/virtue_chosen = virtue_choices[result]
@@ -2313,9 +2313,9 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 							to_chat(user, span_purple("Your body size has been reset to [BODY_SIZE_NORMAL*100]%."))
 						virtuetwo = virtue_chosen
 						to_chat(user, process_virtue_text(virtue_chosen))
-					/*	if (statpack.type != /datum/statpack/wildcard/virtuous)
-							statpack = new /datum/statpack/wildcard/virtuous
-							to_chat(user, span_purple("Your statpack has been set to virtuous (no stats) due to selecting a virtue.")) */
+					/*	if (statpack.type != /datum/statpack/wildcard/talented)
+							statpack = new /datum/statpack/wildcard/talented
+							to_chat(user, span_purple("Your statpack has been set to talented (no stats) due to selecting a virtue.")) */
 
 				if("origin")
 					var/list/virtue_choices = list()
@@ -2356,8 +2356,8 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 							to_chat(user, "<span class='info'>[charflaw.desc]</span>")
 
 				if("body_size")
-					if(statpack.name == "Virtuous" && istype(virtuetwo, /datum/virtue/size) || istype(virtue, /datum/virtue/size))
-						to_chat(user, span_purple("Unable to change sprite size due to virtue."))
+					if(statpack.name == "Talented" && istype(virtuetwo, /datum/virtue/size) || istype(virtue, /datum/virtue/size))
+						to_chat(user, span_purple("Unable to change sprite size due to talent."))
 					else
 						var/new_body_size = tgui_input_number(user, "Choose your desired sprite size:\n([BODY_SIZE_MIN*100]%-[BODY_SIZE_MAX*100]%), Warning: May make your character look distorted", "Character Preference", features["body_size"]*100)
 						if(new_body_size)
@@ -3165,7 +3165,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 		if(istype(V, /datum/virtue/origin))
 			dat += "<font color = '#a3e2ff'><font size = 3>This Origin adds the following skills: <br>"
 		else
-			dat += "<font color = '#a3e2ff'><font size = 3>This Virtue adds the following skills: <br>"
+			dat += "<font color = '#a3e2ff'><font size = 3>This Talent adds the following skills: <br>"
 		for(var/list/L in V.added_skills)
 			var/name
 			if(ispath(L[1],/datum/skill))
@@ -3177,7 +3177,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 		if(istype(V, /datum/virtue/origin))
 			dat += "<font color = '#a3e2ff'><font size = 3>This Origin grants the following traits: <br>"
 		else
-			dat += "<font color = '#a3ffe0'><font size = 3>This Virtue grants the following traits: <br>"
+			dat += "<font color = '#a3ffe0'><font size = 3>This Talent grants the following traits: <br>"
 		for(var/TR in V.added_traits)
 			dat += "[TR] — <font size = 2>[GLOB.roguetraits[TR]]</font><br>"
 		dat += "</font>"
@@ -3185,7 +3185,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 		if(istype(V, /datum/virtue/origin))
 			dat += "<font color = '#a3e2ff'><font size = 3>This Origin adds the following items to your stash: <br>"
 		else
-			dat += "<font color = '#eeffa3'><font size = 3>This Virtue adds the following items to your stash: <br>"
+			dat += "<font color = '#eeffa3'><font size = 3>This Talent adds the following items to your stash: <br>"
 		for(var/I in V.added_stashed_items)
 			dat += "<i>[I]</i> <br>"
 		dat += "</font>"
@@ -3193,7 +3193,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 		if(istype(V, /datum/virtue/origin))
 			dat += "<font color = '#a3e2ff'><font size = 3>This Origin has this special behaviour: <br>"
 		else
-			dat += "<font color = '#ffffff'><font size = 3>This Virtue has this special behaviour: <br>"
+			dat += "<font color = '#ffffff'><font size = 3>This Talent has this special behaviour: <br>"
 		dat += "[V.custom_text]"
 		dat += "</font>"
 	return dat
