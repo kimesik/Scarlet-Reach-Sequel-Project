@@ -65,7 +65,7 @@
 	category_tags = list(CTAG_WRETCH)
 	maximum_possible_slots = 1 //Very strong and also supposed to be unique, so one slot.
 	cmode_music = 'sound/music/combat_swordhunter.ogg'
-	origin_override_type = /datum/virtue/origin/kazengun/lingyue
+	origin_override_type = /datum/virtue/origin/kazengun/china
 	subclass_languages = list(/datum/language/kazengunese)
 	traits_applied = list(TRAIT_DODGEEXPERT)
 	//Bad stats for a wretch, instead they get some really good traits and skills.
@@ -118,7 +118,7 @@
 			l_hand = /obj/item/rogueweapon/sword/rapier
 		if("Shashka")
 			beltl = /obj/item/rogueweapon/scabbard/sword
-			l_hand = /obj/item/rogueweapon/sword/sabre/steppesman 
+			l_hand = /obj/item/rogueweapon/sword/sabre/steppesman
 		if ("Liuyedao")
 			beltl = /obj/item/rogueweapon/scabbard/sword/kazengun
 			l_hand = /obj/item/rogueweapon/sword/sabre/mulyeog
@@ -157,7 +157,7 @@
 	subclass_stats = list(
 		STATKEY_END = 2,
 		STATKEY_PER = 1,
-		STATKEY_SPD = 2, 
+		STATKEY_SPD = 2,
 		STATKEY_STR = 1,
 	)
 
@@ -185,7 +185,7 @@
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather/heavy
 	mask = /obj/item/clothing/mask/rogue/facemask/steel/kazengun
 	beltr = /obj/item/rogueweapon/huntingknife/idagger/steel/kazengun
-	backpack_contents = list(	
+	backpack_contents = list(
 		/obj/item/storage/belt/rogue/pouch/coins/poor = 1,
 		/obj/item/flashlight/flare/torch/lantern/prelit = 1,
 		/obj/item/rope/chain = 1,
