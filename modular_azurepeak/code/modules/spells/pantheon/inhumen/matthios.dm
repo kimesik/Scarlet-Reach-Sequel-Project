@@ -14,9 +14,9 @@
 	invocation_type = "none"
 	associated_skill = /datum/skill/magic/holy
 	antimagic_allowed = TRUE
-	recharge_time = 5 SECONDS 
+	recharge_time = 5 SECONDS
 	miracle = TRUE
-	devotion_cost = 0 
+	devotion_cost = 0
 
 /obj/effect/proc_holder/spell/invoked/appraise/secular
 	name = "Secular Appraise"
@@ -136,7 +136,7 @@
 	revert_cast()
 	return FALSE
 
-// T2 We're going to debuff a targets stats = to the difference between us and them in total stats. 
+// T2 We're going to debuff a targets stats = to the difference between us and them in total stats.
 
 /obj/effect/proc_holder/spell/invoked/equalize
 	name = "Equalize"
@@ -235,7 +235,7 @@
 		var/mob/living/carbon/human/H = user
 		if(istype(H.patron, /datum/patron/inhumen/matthios/gronn))
 			god_name = "Starving Bear"
-		if(istype(H.patron, /datum/patron/inhumen/matthios/kazengun) || istype(H.patron, /datum/patron/inhumen/matthios/kazengun/lingyue))
+		if(istype(H.patron, /datum/patron/inhumen/matthios/kazengun))
 			god_name = "Matoko"
 	if(ishuman(targets[1]))
 		var/mob/living/carbon/human/target = targets[1]
@@ -292,7 +292,7 @@
 
 		if (fire_dmg)
 			target.adjustFireLoss(fire_dmg)
-		
+
 		if (oxy_dmg)
 			target.adjustOxyLoss(oxy_dmg)
 
@@ -303,10 +303,10 @@
 
 		if (stun_to_apply)
 			target.Stun(stun_to_apply)
-		
+
 		if (fire_stacks)
 			target.adjust_fire_stacks(fire_stacks, /datum/status_effect/fire_handler/fire_stacks/divine)
 			target.ignite_mob()
-		
+
 		target.visible_message(span_danger("[target] is burned by holy light!"), span_userdanger("I feel the weight of my wealth burning at my soul!"))
 		playsound(user, 'sound/magic/churn.ogg', 100, TRUE)

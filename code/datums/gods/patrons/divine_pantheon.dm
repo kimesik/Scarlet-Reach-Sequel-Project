@@ -4,9 +4,11 @@
 
 /datum/patron/divine/astrata
 	name = "Astrata"
-	domain = "Twinned Goddess of the Sun, Day, and Order"
-	desc = "The she-form of the Twinned Gods, the combined amalgam of single-bodied Astrata and Noc that opens her eyes at glorious Dae. Men bask under the gift of the Sun. A single form begets two Gods that shift at Dusk and Dawn but always endures, even at night."
-	worshippers = "The Noble Hearted, Zealots and Farmers"
+	domain = "Goddess of the Sun, Law and Order"
+	desc = "The Sun-Tyrant and Noc's twin sister. Astrata leads the Pantheon with an iron fist. \
+	She demands obedience and respect as she leads both mortals and fellow gods through calamity after calamity. \
+	As time passes, her grip only gets tighter and her patience for the Profane thinner."
+	worshippers = "Grenzelhoftians, Lawmen, Commoners"
 	mob_traits = list(TRAIT_APRICITY)
 	miracles = list(/obj/effect/proc_holder/spell/targeted/touch/orison			= CLERIC_ORI,
 					/obj/effect/proc_holder/spell/invoked/ignition				= CLERIC_T0,
@@ -36,7 +38,9 @@
 
 /datum/patron/divine/astrata/kazengun
 	name = "Aisata"
-	desc = "The she-form of the Twinned Gods, the combined amalgam of single-bodied Aisata and Noishi that opens her eyes at glorious Dae. Men bask under the gift of the Sun. A single form begets two Gods that shift at Dusk and Dawn but always endures, even at night."
+	desc = "The Usurper of the Sun and Noc's twin sister. Aisata leads the Pantheon with an iron fist. \
+	She demands obedience and respect as she leads both mortals and fellow gods through calamity after calamity. \
+	As time passes, her grip only gets tighter and her patience for the Profane thinner."
 	associated_faith = /datum/faith/divine/kazengun
 	parentpatron = /datum/patron/divine/astrata
 	noresearch = TRUE
@@ -53,15 +57,13 @@
 					/obj/effect/proc_holder/spell/invoked/invoked_reverence		= CLERIC_T4
 	)
 
-/datum/patron/divine/astrata/kazengun/lingyue
-	associated_faith = /datum/faith/divine/lingyue
-	noresearch = TRUE
-
 /datum/patron/divine/noc
 	name = "Noc"
-	domain = "Twinned God of the Moon, Night, and Knowledge"
-	desc = "The he-form of the Twinned Gods, the combined amalgam of single-bodied Noc and Astrata that opens his eyes during pondorous Night. He gifted man knowledge of divinity and magicks. A single form begets two Gods that shift at Dusk and Dawn but always endures, even at dae."
-	worshippers = "Wizards and Scholars"
+	domain = "God of the Moon, Magic and Knowledge"
+	desc = "The Wise Father and Astrata's twin brother. Noc guides wanderers, scholars and magicians, but his moonlight shines upon all. \
+	Considered to be aloof and irresponsible, but revered for his command of the arcane. \
+	More concerningly, some suspect him to be the patron of vampires."
+	worshippers = "Travelers, Wizards, Scholars"
 	mob_traits = list(TRAIT_NIGHT_OWL, TRAIT_NOCINSPIRE)
 	miracles = list(/obj/effect/proc_holder/spell/targeted/touch/orison			= CLERIC_ORI,
 					/obj/effect/proc_holder/spell/invoked/noc_sight				= CLERIC_T0,
@@ -88,7 +90,9 @@
 
 /datum/patron/divine/noc/kazengun
 	name = "Noishi"
-	desc = "The he-form of the Twinned Gods, the combined amalgam of single-bodied Noishi and Aisata that opens his eyes during pondorous Night. He gifted man knowledge of divinity and magicks. A single form begets two Gods that shift at Dusk and Dawn but always endures, even at dae."
+	desc = "The Moon Prince and Aisata's twin brother. Noishi guides wanderers, scholars and magicians, but his moonlight shines upon all. \
+	Considered to be aloof and irresponsible, but revered for his command of the arcane. \
+	More concerningly, some suspect him to be the patron of bloodsuckers."
 	associated_faith = /datum/faith/divine/kazengun
 	parentpatron = /datum/patron/divine/noc
 	noresearch = TRUE
@@ -102,15 +106,13 @@
 					/obj/effect/proc_holder/spell/invoked/wound_heal			= CLERIC_T3,
 	)
 
-/datum/patron/divine/noc/kazengun/lingyue
-	associated_faith = /datum/faith/divine/lingyue
-	noresearch = TRUE
-
 /datum/patron/divine/dendor
 	name = "Dendor"
-	domain = "God of the Earth and Nature"
-	desc = "The God of Wilds, born from Abyssor's feverish dreams. Spilt forth life from the oceans to land in a wild craze. The Father of Ground-Lyfe. Treefather."
-	worshippers = "Druids, Beasts, Madmen"
+	domain = "God of the Soil and Nature"
+	desc = "The Treefather and the oldest of the Pantheon, second only to Psydon himself in age and experience. \
+	The fierce guardian of the wilds feared by many, and thus the Holy See only formally considers him a part of the Pantheon, \
+	but his druids are often respected and sought-after, thought to be capable of protecting mortals from beasts and werewolves."
+	worshippers = "Druids, Shapeshifters, Wildlings"
 	mob_traits = list(TRAIT_KNEESTINGER_IMMUNITY, TRAIT_LEECHIMMUNE)
 	miracles = list(/obj/effect/proc_holder/spell/targeted/touch/orison			= CLERIC_ORI,
 					/obj/effect/proc_holder/spell/invoked/spiderspeak 			= CLERIC_T0,
@@ -148,20 +150,20 @@
 
 /datum/patron/divine/dendor/kazengun
 	name = "Denno"
-	desc = "The God of Wilds, born from Abysawa's feverish dreams. Spilt forth life from the oceans to land in a wild craze. The Father of Ground-Lyfe. Treefather."
+	desc = "The Treefather and the oldest of the Pantheon, second only to Saidon himself in age and experience. \
+	The fierce guardian of the wilds feared by many, and thus the Holy See only formally considers him a part of the Pantheon, \
+	but his shrine guardians are often respected and sought-after, thought to be capable of protecting mortals from beasts and shapeshifters."
 	associated_faith = /datum/faith/divine/kazengun
 	parentpatron = /datum/patron/divine/dendor
 	noresearch = TRUE
 
-/datum/patron/divine/dendor/kazengun/lingyue
-	associated_faith = /datum/faith/divine/lingyue
-	noresearch = TRUE
-
 /datum/patron/divine/abyssor
 	name = "Abyssor"
-	domain = "The great dreamer, primordial father of the tides. The ancient one, the most warped and potent of the ten."
-	desc = "The strongest of the Ten; when awakened, the world flooded for a thousand daes and a thousand nights before he was put to slumber. Resting fitfully did Dendor split from his skull like a gaping wound. Communes rarely with his followers, only offering glimpses in dreams. Gifted primordial Man water. "
-	worshippers = "Men of the Sea, Primitive Aquatics"
+	domain = "Deity of Seas and Rain."
+	desc = "The Lord of Abyss and the strongest of the Pantheon, but also the most alien and unpredictable, even its reasons for joining the Pantheon are unknown. \
+	It communes with its worshippers via disturbing dreams and strange visions, spurring them to seek to appease its mysterious whims. \
+	Its most fanatical followers try to make Abyssor resurface, believing its fury would defeat the Profane... or the rest of the Pantheon."
+	worshippers = "Etruscans, Sailors, Fatalists"
 	mob_traits = list(TRAIT_ABYSSOR_SWIM, TRAIT_SEA_DRINKER)
 	miracles = list(/obj/effect/proc_holder/spell/targeted/touch/orison			= CLERIC_ORI,
 					/obj/effect/proc_holder/spell/invoked/aquatic_compulsion	= CLERIC_T0,
@@ -193,21 +195,19 @@
 
 /datum/patron/divine/abyssor/kazengun
 	name = "Abysawa"
-	desc = "The strongest of the Twelve; when awakened, the world flooded for a thousand daes and a thousand nights before he was put to slumber. Resting fitfully did Denno split from his skull like a gaping wound. Communes rarely with his followers, only offering glimpses in dreams. Gifted primordial Man water. "
+	desc = "The Lord of Abyss and the strongest of the Pantheon, but also the most alien and unpredictable, even its reasons for joining the Pantheon are unknown. \
+	It communes with its worshippers via disturbing dreams and strange visions, spurring them to seek to appease its mysterious whims. \
+	Its most fanatical followers try to make Abysawa resurface, believing its fury would defeat the Profane... or the rest of the Pantheon."
 	associated_faith = /datum/faith/divine/kazengun
 	parentpatron = /datum/patron/divine/abyssor
 	noresearch = TRUE
 
-/datum/patron/divine/abyssor/kazengun/lingyue
-	desc = "The strongest of the Fourteen; when awakened, the world flooded for a thousand daes and a thousand nights before he was put to slumber. Resting fitfully did Denno split from his skull like a gaping wound. Communes rarely with his followers, only offering glimpses in dreams. Gifted primordial Man water. "
-	associated_faith = /datum/faith/divine/lingyue
-	noresearch = TRUE
-
 /datum/patron/divine/ravox
 	name = "Ravox"
-	domain = "God of Justice, Glory, Battle"
-	desc = "Stalwart warrior, glorious justicier; legends say he came down to the Basin to repel the vile hordes of demons with his own hands, and that he seeks warriors for his divine army among mortals."
-	worshippers = "Warriors, Sellswords & those who seek Justice"
+	domain = "God of Warfare, Glory and Strategy"
+	desc = "The Warmaster. The patron of warriors and commanders, for whom war is more than senseless violence, but a craft to perfect and master. Revered and loathed in equal proportions, \
+	many see him as the Bulwark of the Pantheon, others think of him as a glory hound."
+	worshippers = "Avars, Commanders, Wandering Warriors"
 	mob_traits = list(TRAIT_SHARPER_BLADES)
 	miracles = list(/obj/effect/proc_holder/spell/targeted/touch/orison			= CLERIC_ORI,
 					/obj/effect/proc_holder/spell/invoked/tug_of_war			= CLERIC_T0,
@@ -219,7 +219,7 @@
 					/obj/effect/proc_holder/spell/invoked/wound_heal			= CLERIC_T4,
 	)
 	confess_lines = list(
-		"RAVOX IS JUSTICE!",
+		"RAVOX IS GLORIOUS!",
 		"THROUGH STRIFE, GRACE!",
 		"THROUGH PERSISTENCE, GLORY!",
 	)
@@ -240,6 +240,8 @@
 
 /datum/patron/divine/ravox/kazengun
 	name = "Ratake"
+	desc = "The Swordmaster. The patron of sword-saints and shoguns, for whom war is more than senseless violence, but a craft to perfect and master. Revered and loathed in equal proportions, \
+	many see him as the Bulwark of the Pantheon, others think of him as a glory hound."
 	associated_faith = /datum/faith/divine/kazengun
 	parentpatron = /datum/patron/divine/ravox
 	noresearch = TRUE
@@ -253,15 +255,12 @@
 					/obj/effect/proc_holder/spell/invoked/wound_heal			= CLERIC_T4,
 	)
 
-/datum/patron/divine/ravox/kazengun/lingyue
-	associated_faith = /datum/faith/divine/lingyue
-	noresearch = TRUE
-
 /datum/patron/divine/necra
 	name = "Necra"
-	domain = "Goddess of Death and the Afterlife"
-	desc = "Veiled Lady of the underworld, equally feared and respected by mortals. She taught mortals the inevitability of death and cares for them as they reach the afterlife."
-	worshippers = "The Dead, Mourners, Gravekeepers"
+	domain = "Goddess of Death and the Underworld"
+	desc = "The Undermaiden. A selfish ruler of the Underworld, she joined the Pantheon to take care of the faithful who perish and guide them to her realm, away from the Unspeakable One. \
+	An acceptable arrangement, considering that the alternative is undeath or Gehenna."
+	worshippers = "Nihilists, Mourners, Gravekeepers"
 	mob_traits = list(TRAIT_SOUL_EXAMINE, TRAIT_NOSTINK)	//No stink is generic but they deal with dead bodies so.. makes sense, I suppose?
 	miracles = list(/obj/effect/proc_holder/spell/targeted/touch/orison			= CLERIC_ORI,
 					/obj/effect/proc_holder/spell/invoked/necras_sight			= CLERIC_T0,
@@ -274,7 +273,7 @@
 					/obj/effect/proc_holder/spell/invoked/wound_heal			= CLERIC_T4,
 	)
 	confess_lines = list(
-		"ALL SOULS FIND THEIR WAY TO NECRA!",
+		"NECRA WILL SAVE MY SOUL!",
 		"THE UNDERMAIDEN IS OUR FINAL REPOSE!",
 		"I FEAR NOT DEATH, MY LADY AWAITS ME!",
 	)
@@ -290,19 +289,18 @@
 
 /datum/patron/divine/necra/kazengun
 	name = "Neriko"
+	desc = "The Undermaiden. A selfish ruler of the Underworld, she joined the Pantheon to take care of the faithful who perish and guide them to her realm, away from the Dark Lady. \
+	An acceptable arrangement, considering that the alternative is undeath or Gehenna."
 	associated_faith = /datum/faith/divine/kazengun
 	parentpatron = /datum/patron/divine/necra
 	noresearch = TRUE
 
-/datum/patron/divine/necra/kazengun/lingyue
-	associated_faith = /datum/faith/divine/lingyue
-	noresearch = TRUE
-
 /datum/patron/divine/xylix
 	name = "Xylix"
-	domain = "God of Trickery, Freedom and Inspiration"
-	desc = "The Laughing God, both famous and infamous for his sway over the forces of luck. Xylix is known for the inspiration of many a bards lyric. Speaks through his gift to man; the Tarot deck."
-	worshippers = "Gamblers, Bards, Artists, and the Silver-Tongued"
+	domain = "God of Trickery, Inspiration and Madness"
+	desc = "The Laughing God. Xylix is known for inspiring many mortals with fey moods and pushing them to the peaks of greatness... or the depths of despair and insanity. \
+	The wildcard of the Pantheon, distrusted by all and known to occassionally help the Profane for his amusement, but tolerated for his cunning and insight."
+	worshippers = "Jesters, Tricksters and Madmen"
 	mob_traits = list(TRAIT_XYLIX)
 	miracles = list(/obj/effect/proc_holder/spell/targeted/touch/orison				= CLERIC_ORI,
 					/obj/effect/proc_holder/spell/self/xylixslip					= CLERIC_T0,
@@ -319,8 +317,8 @@
 		"NOC IS NIGHT!",
 		"DENDOR PROVIDES!",
 		"ABYSSOR COMMANDS THE WAVES!",
-		"RAVOX IS JUSTICE!",
-		"ALL SOULS FIND THEIR WAY TO NECRA!",
+		"RAVOX IS GLORIOUS!",
+		"NECRA WILL SAVE MY SOUL!",
 		"HAHAHAHA! AHAHAHA! HAHAHAHA!",
 		"PESTRA SOOTHES ALL ILLS!",
 		"MALUM IS MY MUSE!",
@@ -329,7 +327,7 @@
 		"GRAGGAR IS THE BEAST I WORSHIP!",
 		"MATTHIOS IS MY LORD!",
 		"BAOTHA IS MY JOY!",
-		"REBUKE THE HERETICAL- PSYDON ENDURES!",
+		"REBUKE THE HERETICAL, PSYDON ENDURES!",
 	)
 	miracle_healing_lines = list(
 		"A mirthful breeze swirls around %TARGET!"
@@ -343,7 +341,8 @@
 
 /datum/patron/divine/xylix/kazengun
 	name = "Xyji"
-	desc = "The Laughing God, both famous and infamous for his sway over the forces of luck. Xyji is known for the inspiration of many a bards lyric. Speaks through his gift to man; the Tarot deck."
+	desc = "The Laughing God. Xyji is known for inspiring many mortals with fey moods and pushing them to the peaks of greatness... or the depths of despair and insanity. \
+	The wildcard of the Pantheon, distrusted by all and known to occassionally help the Profane for his amusement, but tolerated for his cunning and insight."
 	associated_faith = /datum/faith/divine/kazengun
 	parentpatron = /datum/patron/divine/xylix
 	noresearch = TRUE
@@ -358,15 +357,11 @@
 					/obj/effect/proc_holder/spell/invoked/wound_heal				= CLERIC_T4,
 	)
 
-/datum/patron/divine/xylix/kazengun/lingyue
-	associated_faith = /datum/faith/divine/lingyue
-	noresearch = TRUE
-
 /datum/patron/divine/pestra
 	name = "Pestra"
-	domain = "Goddess of Decay, Disease and Medicine"
-	desc = "Goddess that blessed many a saint with healing hands, Pestra taught man the arts of medicine and its benefits."
-	worshippers = "The Sick, Phyicians, Apothecaries"
+	domain = "Goddess of Medicine, Compassion and Charity"
+	desc = "The Healer. Pestra's compassion extends to all mortals, with her devotees engaging not only in medicine, but also charity, social work and counselling."
+	worshippers = "The Sick, Physicians, Benefactors"
 	mob_traits = list(TRAIT_EMPATH, TRAIT_ROT_EATER)
 	miracles = list(/obj/effect/proc_holder/spell/targeted/touch/orison			= CLERIC_ORI,
 					/obj/effect/proc_holder/spell/invoked/diagnose				= CLERIC_ORI,
@@ -381,8 +376,8 @@
 	)
 	confess_lines = list(
 		"PESTRA SOOTHES ALL ILLS!",
-		"DECAY IS A CONTINUATION OF LIFE!",
-		"MY AFFLICTION IS MY TESTAMENT!",
+		"ALL LIFE IS SACRED!",
+		"THE HEALER WEEPS AT MY SUFFERING!",
 	)
 	miracle_healing_lines = list(
 		"An aura of clinical care encompasses %TARGET!"
@@ -400,26 +395,22 @@
 
 /datum/patron/divine/pestra/kazengun
 	name = "Pesiko"
-	desc = "Goddess that blessed many a saint with healing hands, Pesiko taught man the arts of medicine and its benefits."
+	desc = "The Healer. Pesiko's compassion extends to all mortals, with her devotees engaging not only in medicine, but also charity, social work and counselling."
 	associated_faith = /datum/faith/divine/kazengun
 	parentpatron = /datum/patron/divine/pestra
 	noresearch = TRUE
 
-/datum/patron/divine/pestra/kazengun/lingyue
-	associated_faith = /datum/faith/divine/lingyue
-	noresearch = TRUE
-
 /datum/patron/divine/pestra/effluvia
 	name = "Saint's Cocoon"
-	desc = "The Saint's Cocoon, a nascent Goddess who rules from a time hereafter. She whispers discordant secrets to her followers."
+	desc = "The Saint's Cocoon, a nascent goddess who rules from a time hereafter. She whispers discordant secrets to her followers."
 	associated_faith = /datum/faith/divine/effluvia
 	parentpatron = /datum/patron/divine/pestra
 	noresearch = TRUE
 
 /datum/patron/divine/malum
 	name = "Malum"
-	domain = "God of Fire, Destruction and Rebirth"
-	desc = "Opinionless god of the crafts. He teaches that great works for killing or saving are great works, either way. The well-oiled guillotine and the well-sharpened axe are tools, and there is no good and evil to their craft."
+	domain = "God of Creation and Fire"
+	desc = "The Forgelord. To Malum, creation is the end rather than a mean, as he teaches that great works for killing or saving are great works either way. The well-oiled guillotine and the well-sharpened axe are tools, and there is no good and evil to their craft."
 	worshippers = "Smiths, Miners, Engineers"
 	mob_traits = list(TRAIT_FORGEBLESSED, TRAIT_BETTER_SLEEP)
 	miracles = list(/obj/effect/proc_holder/spell/targeted/touch/orison			= CLERIC_ORI,
@@ -466,15 +457,12 @@
 					/obj/effect/proc_holder/spell/invoked/wound_heal			= CLERIC_T3,
 	)
 
-/datum/patron/divine/malum/kazengun/lingyue
-	associated_faith = /datum/faith/divine/lingyue
-	noresearch = TRUE
-
 /datum/patron/divine/eora
 	name = "Eora"
-	domain = "Goddess of Love, Life and Beauty"
-	desc = "Baotha's fairer half, made from blind, unconditional love. She is without a shred of hate in her heart and taught mankind that true love can even transcend Necra's grasp."
-	worshippers = "Lovers, the romantically inclined, and Doting Grandparents"
+	domain = "Goddess of Love, Family and Art"
+	desc = "The Allmother, her love for mortals and her fellow gods even greater than that of Pestra's, but all the more alien for it. Many mortals turn to her for solace and guidance, \
+	and weddings are often made in her witness even by those who don't worship her."
+	worshippers = "Artists, Devoted Family Men, Doting Grandparents"
 	mob_traits = list(TRAIT_EMPATH, TRAIT_EXTEROCEPTION)
 	miracles = list(/obj/effect/proc_holder/spell/targeted/touch/orison			= CLERIC_ORI,
 					/obj/effect/proc_holder/spell/invoked/eora_blessing			= CLERIC_T0,
@@ -510,7 +498,8 @@
 
 /datum/patron/divine/eora/kazengun
 	name = "Eori"
-	desc = "Baosumi's fairer half, made from blind, unconditional love. She is without a shred of hate in her heart and taught mankind that true love can even transcend Neriko's grasp."
+	desc = "The Allmother, her love for mortals and her fellow gods even greater than that of Pesiko's, but all the more alien for it. Many mortals turn to her for solace and guidance, \
+	and weddings are often made in her witness even by those who don't worship her."
 	associated_faith = /datum/faith/divine/kazengun
 	parentpatron = /datum/patron/divine/eora
 	noresearch = TRUE
@@ -525,10 +514,6 @@
 					/obj/effect/proc_holder/spell/invoked/wound_heal			= CLERIC_T4,
 					/obj/effect/proc_holder/spell/invoked/pomegranate/kazengun	= CLERIC_T4,
 	)
-
-/datum/patron/divine/eora/kazengun/lingyue
-	associated_faith = /datum/faith/divine/lingyue
-	noresearch = TRUE
 
 /////////////////////////////////
 // Does God Hear Your Prayer ? //
