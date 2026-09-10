@@ -172,8 +172,8 @@
 	long lifespan to closely-guarded alchemical secrets."
 
 /datum/virtue/origin/kazengun
-	name = "Kazengun"
-	desc = "I originate from the temperate forests of Kazengun, a region poorly known to the West. Its people worship a syncretic variation of the Divine Pantheon, often percieved as heretical."
+	name = "Kazengun - East"
+	desc = "I originate from the archipelago of Kazengun, a region also known as East Kazengun, and to the continent dwellers often associated with the whole Kazengun."
 	origin_title = "Kazengun"
 	origin_language = /datum/language/kazengunese
 	restricted = TRUE
@@ -188,18 +188,14 @@
 	. = ..()
 	uniquefaith = GLOB.kazfaith
 
-/datum/virtue/origin/kazengun/lingyue
-	name = "Kazengun - Lingyue"
-	region_title = "Lingyue"
-	desc = "I originate from the isolated isle of Lingyue, known primarily for worshipping Ascendants as part of the Divine Pantheon. It is a land of ruthless individualism where the mighty rule."
-
-/datum/virtue/origin/kazengun/lingyue/New()
-	. = ..()
-	uniquefaith = GLOB.linfaith
+/datum/virtue/origin/kazengun/china
+	name = "Kazengun - West"
+	region_title = "West Kazengun"
+	desc = "I originate from the mainland of Kazengun, also known as West Kazengun, a far less known region to the continent dwellers."
 
 /datum/virtue/origin/hammerhold
 	name = "Hammerhold"
-	desc = "I originate from mountainous Hammerhold, a frigid archipelago in the far north. It is sparsely populated: only the hardiest peoples can endure its arctic, barren lands."
+	desc = "I originate from mountainous Hammerhold, a frigid land in the far north. It is sparsely populated: only the hardiest peoples can endure its arctic, barren lands."
 	origin_title = "Hammerhold"
 	origin_language = /datum/language/dwarvish
 	restricted = TRUE
@@ -250,53 +246,53 @@
 	. = ..()
 	uniquefaith = GLOB.fluvfaith
 
-/datum/virtue/origin/unusual
-	name = "Unusual"
-	desc = "I originate from a foreign region in which my race is a minority. The customs of this land have become my own, at the cost of my heritage."
-	triumph_cost = 2
-	custom_text = "Allows selection of foreign origin upon spawn."
+// /datum/virtue/origin/unusual
+// 	name = "Unusual"
+// 	desc = "I originate from a foreign region in which my race is a minority. The customs of this land have become my own, at the cost of my heritage."
+// 	triumph_cost = 2
+// 	custom_text = "Allows selection of foreign origin upon spawn."
 
-/datum/virtue/origin/apply_to_human(mob/living/carbon/human/recipient)
-	recipient.dna.species.origin = origin_title
-	recipient.dna.species.region = region_title
-	if(!extra_language)
-		recipient.grant_language(origin_language)
+// /datum/virtue/origin/apply_to_human(mob/living/carbon/human/recipient)
+// 	recipient.dna.species.origin = origin_title
+// 	recipient.dna.species.region = region_title
+// 	if(!extra_language)
+// 		recipient.grant_language(origin_language)
 
-/datum/virtue/origin/unusual/apply_to_human(mob/living/carbon/human/recipient)
-	addtimer(CALLBACK(src, .proc/unusual_apply, recipient), 50)
+// /datum/virtue/origin/unusual/apply_to_human(mob/living/carbon/human/recipient)
+// 	addtimer(CALLBACK(src, .proc/unusual_apply, recipient), 50)
 
-/datum/virtue/origin/unusual/proc/unusual_apply(mob/living/carbon/human/recipient)
-	var/list/virtue_choices = list()
-	for(var/path as anything in GLOB.virtues)
-		var/datum/virtue/V = GLOB.virtues[path]
-		if (!V.name)
-			continue
-		if (!istype(V, /datum/virtue/origin))
-			continue
-		if (V.restricted == TRUE)
-			if(!(recipient.dna.species.type in V.races))
-				continue
-		if (istype(V, /datum/virtue/origin/racial))
-			if((recipient.dna.species.type in V.races))
-				continue
-		if (istype(V, /datum/virtue/origin/unusual))
-			continue
-		virtue_choices[V.name] = V
-	if(length(virtue_choices))
-		var/result = tgui_input_list(recipient, "From where do you come?", "ORIGINS", virtue_choices)
-		if(result)
-			recipient.dna.species.skin_tone_wording = "Custom"
-			var/datum/virtue/virtue_chosen = virtue_choices[result]
-			apply_virtue(recipient, virtue_chosen)
-			if(virtue_chosen.extra_language == TRUE)
-				recipient.grant_language(recipient.client.prefs.extra_language)
-		else
-			var/chosen_virtue = new recipient.dna.species.origin_default
-			apply_virtue(recipient, chosen_virtue)
-			to_chat(recipient, "Denied foreign origin! Resetting to default. Triumph cost refunded!")
-			recipient.adjust_triumphs(3)
-	else
-		var/chosen_virtue = new recipient.dna.species.origin_default
-		apply_virtue(recipient, chosen_virtue)
-		to_chat(recipient, "No foreign origins available! Resetting to default. Triumph cost refunded!")
-		recipient.adjust_triumphs(3)
+// /datum/virtue/origin/unusual/proc/unusual_apply(mob/living/carbon/human/recipient)
+// 	var/list/virtue_choices = list()
+// 	for(var/path as anything in GLOB.virtues)
+// 		var/datum/virtue/V = GLOB.virtues[path]
+// 		if (!V.name)
+// 			continue
+// 		if (!istype(V, /datum/virtue/origin))
+// 			continue
+// 		if (V.restricted == TRUE)
+// 			if(!(recipient.dna.species.type in V.races))
+// 				continue
+// 		if (istype(V, /datum/virtue/origin/racial))
+// 			if((recipient.dna.species.type in V.races))
+// 				continue
+// 		if (istype(V, /datum/virtue/origin/unusual))
+// 			continue
+// 		virtue_choices[V.name] = V
+// 	if(length(virtue_choices))
+// 		var/result = tgui_input_list(recipient, "From where do you come?", "ORIGINS", virtue_choices)
+// 		if(result)
+// 			recipient.dna.species.skin_tone_wording = "Custom"
+// 			var/datum/virtue/virtue_chosen = virtue_choices[result]
+// 			apply_virtue(recipient, virtue_chosen)
+// 			if(virtue_chosen.extra_language == TRUE)
+// 				recipient.grant_language(recipient.client.prefs.extra_language)
+// 		else
+// 			var/chosen_virtue = new recipient.dna.species.origin_default
+// 			apply_virtue(recipient, chosen_virtue)
+// 			to_chat(recipient, "Denied foreign origin! Resetting to default. Triumph cost refunded!")
+// 			recipient.adjust_triumphs(3)
+// 	else
+// 		var/chosen_virtue = new recipient.dna.species.origin_default
+// 		apply_virtue(recipient, chosen_virtue)
+// 		to_chat(recipient, "No foreign origins available! Resetting to default. Triumph cost refunded!")
+// 		recipient.adjust_triumphs(3)

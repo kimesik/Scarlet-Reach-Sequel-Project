@@ -19,11 +19,6 @@
 /datum/faith/old_god/kazengun/New()
 	uniquelist = GLOB.kazfaith
 
-/datum/faith/old_god/kazengun/lingyue
-
-/datum/faith/old_god/kazengun/lingyue/New()
-	uniquelist = GLOB.linfaith
-
 /datum/faith/old_god/standard/gronn
 
 /datum/faith/old_god/standard/gronn/New()
