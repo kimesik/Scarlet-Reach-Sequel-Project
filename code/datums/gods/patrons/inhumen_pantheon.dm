@@ -3,7 +3,7 @@
 	associated_faith = /datum/faith/inhumen/standard
 	undead_hater = FALSE
 	var/crafting_recipes = list(/datum/crafting_recipe/roguetown/structure/zizo_shrine)			//Allows construction of unique bad shrine.
-	profane_words = list("cock","dick","fuck","shit","pussy","cuck","cunt","asshole", "pintle")	//Same as master but 'Zizo' is allowed now.
+	profane_words = list("cock","dick","fuck","shit","pussy","cuck","cunt","asshole", "pintle")	//Same as master but names of the Ascendants are allowed now.
 	confess_lines = list(
 		"PSYDON IS THE DEMIURGE!",
 		"THE TEN ARE WORTHLESS COWARDS!",
@@ -19,9 +19,10 @@
 
 /datum/patron/inhumen/zizo
 	name = "Zizo"
-	domain = "Progress, Undeath, Hubris, Left Hand Magicks"
-	desc = "A once-mortal snow elf turned god. Her hubris in thinking she could harvest lux from the planet itself led to the elimination of her entire race. Her works are still used to this dae in some cases."
-	worshippers = "Necromancers, Researchers, Warlocks, and the Undead"
+	domain = "Goddess of Progress, Undeath and Ambition"
+	desc = "An elf turned goddess, the first of the Ascendants, who achieved divinity by mastering the arcane. Her followers and enemies alike pin the Celestial Empire's collapse on her, \
+	but she has no tears to shed for the past. She seeks to bring upon a better, more progressive future for mortals, whether they want it or not."
+	worshippers = "Necromancers, Rogue Artificers, the Undead"
 	mob_traits = list(TRAIT_CABAL, TRAIT_ZIZOSIGHT, TRAIT_ZOMBIE_IMMUNE)
 	miracles = list(/obj/effect/proc_holder/spell/targeted/touch/orison					= CLERIC_ORI,
 					/obj/effect/proc_holder/spell/self/zizo_snuff						= CLERIC_T0,
@@ -59,21 +60,22 @@
 	associated_faith = /datum/faith/inhumen/kazengun
 	noresearch = TRUE
 
-/datum/patron/inhumen/zizo/kazengun/lingyue
-	associated_faith = /datum/faith/divine/lingyue
-	noresearch = TRUE
-
 /datum/patron/inhumen/zizo/gronn
 	name = "The Plotting Wolf"
-	desc = "A once-mortal snow elf turned god. Her hubris in thinking she could harvest lux from the planet itself led to the elimination of her entire race. Her works are still used to this dae in some cases."
+	desc = "The cunning great wolf, the patron of shamans and rulers. She's deemed to be the strongest of all Great Beasts, \
+	not because of raw might, but because of her intelligence and drive. Many Gronns believe Zizo to be a human avatar of \
+	the Plotting Wolf, born into this world to tear down the falsehoods of the old civilization."
 	associated_faith = /datum/faith/inhumen/gronn
 	noresearch = TRUE
 
 /datum/patron/inhumen/graggar
 	name = "Graggar"
-	domain = "God of Might Makes Right, Conquest, War, Brutality"
-	desc = "Graggar is a ruthless god who exalts strength, domination, and the crushing of the weak. His followers do not seek honor or fairness, only victory and the right to rule through force. Mercy is weakness, and compassion is a lie for the feeble. Graggar demands conquest, subjugation, and the endless struggle for supremacy. He is worshipped by those who revel in cruelty, oppression, and the law of the strong."
-	worshippers = "Tyrants, Warlords, Slavers, and the Cruel"
+	domain = "God of Violence, Conquest and Domination"
+	desc = "A dwarf turned god, the second of Ascendants, who achieved divinity by eating the slain Devil's heart. \
+	Graggar is a ruthless deity who exalts strength and dominance, and has little patience for cowards and those who can't back up their privilege with might. \
+	His followers do not seek honor or fairness, only victory and the right to rule through force. \
+	Graggar demands conquest, subjugation, and the endless struggle for supremacy."
+	worshippers = "Warlords, Slavers, the Cruel"
 	mob_traits = list(TRAIT_HORDE, TRAIT_ORGAN_EATER)
 	miracles = list(/obj/effect/proc_holder/spell/targeted/touch/orison					= CLERIC_ORI,
 					/obj/effect/proc_holder/spell/self/graggar_bloodrage				= CLERIC_T0,
@@ -104,7 +106,10 @@
 
 /datum/patron/inhumen/graggar/kazengun
 	name = "Gaiyuke"
-	desc = "Gaiyuke is a ruthless god who exalts strength, domination, and the crushing of the weak. His followers do not seek honor or fairness, only victory and the right to rule through force. Mercy is weakness, and compassion is a lie for the feeble. Gaiyuke demands conquest, subjugation, and the endless struggle for supremacy. He is worshipped by those who revel in cruelty, oppression, and the law of the strong."
+	desc = "A dwarf turned god, the second of Ascendants, who achieved divinity by eating the slain Devil's heart. \
+	Gaiyuke is a ruthless deity who exalts strength and dominance, and has little patience for cowards and those who can't back up their privilege with might. \
+	His followers do not seek honor or fairness, only victory and the right to rule through force. \
+	Gaiyuke demands conquest, subjugation, and the endless struggle for supremacy."
 	associated_faith = /datum/faith/inhumen/kazengun
 	noresearch = TRUE
 	miracles = list(/obj/effect/proc_holder/spell/targeted/touch/orison					= CLERIC_ORI,
@@ -117,13 +122,11 @@
 					/obj/effect/proc_holder/spell/invoked/wound_heal					= CLERIC_T4,
 	)
 
-/datum/patron/inhumen/graggar/kazengun/lingyue
-	associated_faith = /datum/faith/divine/lingyue
-	noresearch = TRUE
-
 /datum/patron/inhumen/graggar/gronn
 	name = "The Grinning Moose"
-	desc = "A ruthless god who exalts strength, domination, and the crushing of the weak. His followers do not seek honor or fairness, only victory and the right to rule through force. Mercy is weakness, and compassion is a lie for the feeble. He demands conquest, subjugation, and the endless struggle for supremacy. He is worshipped by those who revel in cruelty, oppression, and the law of the strong."
+	desc = "The vicious great moose, the patron of warriors and berserkers. His worshippers see him not only as a god, \
+	but also as the greatest prey to hunt, convinced that slaying and eating his flesh would make them gods too. \
+	Graggar is seen as a human avatar of the Grinning Moose by modern Gronns, and too wish to challenge and defeat him one day."
 	associated_faith = /datum/faith/inhumen/gronn
 	noresearch = TRUE
 	miracles = list(/obj/effect/proc_holder/spell/targeted/touch/orison					= CLERIC_ORI,
@@ -138,9 +141,10 @@
 
 /datum/patron/inhumen/matthios
 	name = "Matthios"
-	domain = "God of Exchange, Alchemy, Theft, and Greed"
-	desc = "The Man who stole fire from the sun and used it in his pursuit of immortality; exchanging the knowledge of how to make fire with the lessers for safety in doing so. He guides those who live in the dark, away from the flame of civilization; and those who believe in his cause bring the wealth of the undeserving in the light to the deserving in the dark."
-	worshippers = "Highwaymen, Alchemists, Downtrodden Peasants, and Merchants"
+	domain = "God of Exchange, Alchemy, Theft and Camaraderie"
+	desc = "A human turned god, the third of Ascendants, who achieved divinity by stealing the Panacea from Astrata and giving it to mortals in exchange for worship and godhood. \
+	He guides those who live in the dark, away from the flame of civilization; and those who believe in his cause bring the wealth of the undeserving in the light to the deserving in the dark."
+	worshippers = "Thieves, Merchants, Downtrodden Commoners"
 	mob_traits = list(TRAIT_COMMIE, TRAIT_MATTHIOS_EYES, TRAIT_CULTIC_THIEF)
 	miracles = list(/obj/effect/proc_holder/spell/targeted/touch/orison					= CLERIC_ORI,
 					/obj/effect/proc_holder/spell/invoked/appraise						= CLERIC_ORI,
@@ -182,21 +186,21 @@
 					/obj/effect/proc_holder/spell/invoked/wound_heal					= CLERIC_T4,
 	)
 
-/datum/patron/inhumen/matthios/kazengun/lingyue
-	associated_faith = /datum/faith/divine/lingyue
-	noresearch = TRUE
-
 /datum/patron/inhumen/matthios/gronn
 	name = "The Starving Bear"
-	desc = "The Man who stole fire from the sun and used it in his pursuit of immortality; exchanging the knowledge of how to make fire with the lessers for safety in doing so. He guides those who live in the dark, away from the flame of civilization; and those who believe in his cause bring the wealth of the undeserving in the light to the deserving in the dark."
+	desc = "The greedy Starving Bear, the patron of sea raiders and alchemists. Famine is an unfortunately common tragedy \
+	in the Gronnic Highlands, and alchemists and raiders sworn to the Starving Bear do their best to prevent starvation. \
+	The Starving Bear's human avatar is thought to be Matthios who promises to make Gronns wealthy at the expense of the old civilization."
 	associated_faith = /datum/faith/inhumen/gronn
 	noresearch = TRUE
 
 /datum/patron/inhumen/baotha
 	name = "Baotha"
-	domain = "Goddess of Hedonism, Addiction, Anguish, and Heartbreak"
-	desc = "The twin sister of Eora, fallen to disgrace. She brings comfort to those who can't find it elsewhere but the bottom of a bottle; and she tempts those who have lost much into her fold through offers of relief and pleasure, yet they soon find themselves unable to escape her grasp. Seen as a scorned lover by many, and followed by such."
-	worshippers = "Widows, Gamblers, Addicts, and Scorned Lovers"
+	domain = "Goddess of Hedonism, Addiction, Relief and Heartbreak"
+	desc = "A tiefling turned goddess, the fourth of Ascendants, who achieved divinity through unimaginable suffering. \
+	She seeks to bring comfort to all those who suffer, promising sweet oblivion and pleasant numbness; \
+	and she tempts those who have lost much into her fold through offers of relief and pleasure, yet they soon find themselves unable to escape her grasp."
+	worshippers = "Addicts, Thrill-seekers, the Suffering Addicts"
 	mob_traits = list(TRAIT_DEPRAVED, TRAIT_CRACKHEAD)
 	miracles = list(/obj/effect/proc_holder/spell/targeted/touch/orison					= CLERIC_ORI,
 					/obj/effect/proc_holder/spell/invoked/baothavice					= CLERIC_T0,
@@ -233,17 +237,17 @@
 
 /datum/patron/inhumen/baotha/kazengun
 	name = "Baosumi"
-	desc = "The twin sister of Eori, fallen to disgrace. She brings comfort to those who can't find it elsewhere but the bottom of a bottle; and she tempts those who have lost much into her fold through offers of relief and pleasure, yet they soon find themselves unable to escape her grasp. Seen as a scorned lover by many, and followed by such."
+	desc = "A tiefling turned goddess, the fourth of Ascendants, who achieved divinity through unimaginable suffering. \
+	She seeks to bring comfort to all those who suffer, promising sweet oblivion and pleasant numbness; \
+	and she tempts those who have lost much into her fold through offers of relief and pleasure, yet they soon find themselves unable to escape her grasp."
 	associated_faith = /datum/faith/divine/kazengun
-	noresearch = TRUE
-
-/datum/patron/inhumen/baotha/kazengun/lingyue
-	associated_faith = /datum/faith/divine/lingyue
 	noresearch = TRUE
 
 /datum/patron/inhumen/baotha/gronn
 	name = "The Relishing Leopard"
-	desc = "She brings comfort to those who can't find it elsewhere but the bottom of a bottle; and she tempts those who have lost much into her fold through offers of relief and pleasure, yet they soon find themselves unable to escape her grasp. Seen as a scorned lover by many, and followed by such."
+	desc = "The debauched Relishing Leopard, the patron of skalds and thrallmasters. Life in the Gronnic Highlands is harsh, and many find comfort in simple pleasures: \
+	from flesh and food to music and drugs. In the resource-scarce land, such pleasures are highly sought-after and the Relishing Leopard is believed to aid those who seek them.\
+	Baotha is believed to be the Relishing Leopard's human avatar, who beckons Gronns to the continent with promises of plentiful food and pleasures."
 	associated_faith = /datum/faith/inhumen/gronn
 	noresearch = TRUE
 

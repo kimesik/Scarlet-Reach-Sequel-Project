@@ -1,19 +1,19 @@
 /datum/faith/old_god/standard
 	name = "Old God"
-	desc = "The Holy See has been taken over by misguided fools who defile Psydon and worship false gods, but we survive.\n\
-		<b>PSYDON YET LIVES. PSYDON YET ENDURES.</b>\n\
-		PSYDON sent the COMET SYON to destroy the rampaging Godhena and save all Mortals. Though he remains silent now, the fools believe him DEAD - but \
-		PSYDON YET LIVES, AND PSYDON YET ENDURES. Unanswered prayers and impotent miracles - they are TESTS."
-	worshippers = "People of Naledi, People of Giza, People of Hammerhold, People of Avar, Otavan Dark elves Orthodoxists, religious extremists."
+	desc = "The faith of the old, worshipping PSYDON, the enigmatic god-creator of the world. \
+		PSYDON has presumably died alongside the Devil which He defeated \
+		by sending the COMET SYON, but His worshippers believe Him to be merely silent and weakened, recovering \
+		from the battle. Those of the Holy See, however, believe that He's dead."
+	worshippers = "Otavans, Naledians, Hammerholdians, the Stubborn and the Foolish."
 	godhead = /datum/patron/old_god
 
 /datum/faith/old_god/kazengun
 	name = "Ancient God"
-	desc = "The Holy See has been taken over by misguided fools who defile Saidon and worship false gods, but we survive.\n\
-		<b>SAIDON YET LIVES. SAIDON YET ENDURES.</b>\n\
-		SAIDON sent the COMET SYON to destroy the rampaging Godhena and save all Mortals. Though he remains silent now, the fools believe him DEAD - but \
-		SAIDON YET LIVES, AND SAIDON YET ENDURES. Unanswered prayers and impotent miracles - they are TESTS."
-	worshippers = "Religious extremists."
+	desc = "The faith of the old, worshipping SAIDON, the god-creator of the world. \
+		SAIDON has presumably died alongside Mara which He defeated \
+		by sending the COMET SYON, but His worshippers believe Him to be merely silent and weakened, recovering \
+		from the battle. Those of the Holy See, however, believe that He's dead."
+	worshippers = "Lunatics, the Stubborn and the Foolish."
 	godhead = /datum/patron/old_god/kazengun
 
 /datum/faith/old_god/kazengun/New()

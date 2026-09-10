@@ -1,38 +1,28 @@
 /datum/faith/divine/standard
 	name = "Divine Pantheon"
-	desc = "The TEN, children of PSYDON. The most accepted religion in Scarlet Reach. Born from Psydon will for companionship, and survivors of the war in heaven. The TEN freed mortals, gaving them shape and life. \n \n\
-		The <b>Holy See</b>, recently rocked by a violent schism, controls diosces across the world.\
-		The splinter church, the <b>Holy Ecclesial</b>, recognize the heretical 'Ascendants' - better known as INHUMEN GODS- as True Divinity. \
-		But it is only through faith of the TRUE DIVINE that hope can be found in this world."
+	desc = "A loose alliance of ten deities led by Astrata the Sun-Tyrant. The most widespread and accepted religion in Scarlet Reach, \
+		led by the primarily Astratan <b>Grenzelhoftian Holy See</b> which claims to represent all of the Ten. \
+		PSYDON's death and the rise of the Ascendants forced these unlikely allies to band together against the encroaching darkness, \
+		yet it's clear that not every deity of this pantheon has the coalition's best interests at heart."
 	worshippers = "Citizens of Scarlet Reach, conservative religious-folk, many commonfolk."
 	godhead = /datum/patron/divine/astrata
 
 /datum/faith/divine/kazengun
 	name = "Heavenly Court"
-	desc = "The TWELVE who hold rightful authority in Heaven. They are the reincarnations of SAIDON, bearers of His image who teach the mortal world how to emulate <b>True Divinity</b>. \
-	It is our place to serve the Heavenly Court, so we may be shown mercy upon death and our next Lyfe. Virtuous souls shall reincarnate in greater bodies, yet those who defile \
+	desc = "A sacred hierarchy of ten deities who hold rightful authority in Heaven. East Kazengunites see the Ten as successors of SAIDON, \
+	bearers of His legacy who teach mortals how to live righteously. Virtuous souls are believed to reincarnate in greater bodies, while those who sin and defile \
 	shall be reduced to the mindless bodies of animals."
-	worshippers = "The people of Kazengun."
+	worshippers = "East Kazengunites."
 	godhead = /datum/patron/divine/noc/kazengun
 
 /datum/faith/divine/kazengun/New()
 	uniquelist = GLOB.kazfaith
 
-/datum/faith/divine/lingyue
-	name = "Transcendents"
-	desc = "The FOURTEEN mighty spirits devoured SAIDON and gained <b>True Mastery</b> over our realm. We strive to emulate them. The mighty dominate the weak. <b>Ambition</b> \
-	is our Divine imperative. We show devotion to the <b>Transcendents</b> so that their power may become our own."
-	worshippers = "The people of Lingyue."
-	godhead = /datum/patron/inhumen/graggar/kazengun/lingyue
-
-/datum/faith/divine/lingyue/New()
-	uniquelist = GLOB.linfaith
-
 /datum/faith/divine/effluvia
-	name = "Nascent Goddess"
-	desc = "The nascent Goddess at the heart of <b>Mercuriam</b>, the ancient bronze city, will one day awaken and bring forth a new golden age of <b>wisdom</b>. Until then, \
-	we shall listen closely to the whispers she provides us. Glimpses of a future: <b>green-glowing</b> technologies that boggle the mind.<br>Be steadfast in one's studies, \
-	for only the intellectually worthy shall inherit the new world."
+	name = "The Nascent Goddess"
+	desc = "The people of Effluvia offer gifts and prayers to the so-called Nascent Goddess, who is said to gestate in a cocoon to the center of <b>Mercuriam</b>, the ancient bronze city. \
+	They believe that one day she will awaken and bring forth a new golden age. Until then, \
+	they listen closely to the whispers she provides through thick walls of her shell. Scholars outside of Effluvia suspect the goddess to be a creation of Pestra."
 	worshippers = "The fluvians of Effluvia."
 	godhead = /datum/patron/divine/pestra/effluvia
 

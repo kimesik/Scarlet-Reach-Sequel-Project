@@ -1,8 +1,8 @@
 /datum/patron/old_god
 	name = "Psydon"
-	domain = "God of Ontological Reality"
-	desc = "The true God of everything, Psydon is maximally good - He created humen in his image to live in Psydonia, and defended the Black Basin by sending the COMET SYON to defeat the rampaging archdemon."	
-	worshippers = "Fanatics and Nostalgists"
+	domain = "God-Creator"
+	desc = "The creator of the world. He created humanity in his image to live on Creation, and defended his children by sending the COMET SYON to defeat the rampaging Devil. Idolaters believe him dead, but is he?"
+	worshippers = "Fanatics and the Faithful"
 	associated_faith = /datum/faith/old_god/standard
 	mob_traits = list(TRAIT_PSYDONIAN_GRIT)
 	miracles = list(
@@ -14,14 +14,13 @@
 	traits_tier = list(TRAIT_PSYDONITE = CLERIC_T1)
 	confess_lines = list(
 		"THERE IS ONLY ONE TRUE GOD!",
-		"PSYDON YET LYVES! PSYDON YET ENDURES!",
-		"REBUKE THE HERETICAL- PSYDON ENDURES!",
+		"PSYDON YET LIVES! PSYDON YET ENDURES!",
+		"REBUKE THE HERETICAL, PSYDON ENDURES!",
 	)
 	rites = "Rune of Enduring"
 
 /datum/patron/old_god/kazengun
 	name = "Saidon"
-	desc = "The true God of everything, Saidon is maximally good - He created humen in his image to live in Saidonia, and defended the Black Basin by sending the COMET SYON to defeat the rampaging archdemon."
 	associated_faith = /datum/faith/old_god/kazengun
 
 /datum/patron/old_god/situational_bonus(mob/living/follower, mob/living/target)
