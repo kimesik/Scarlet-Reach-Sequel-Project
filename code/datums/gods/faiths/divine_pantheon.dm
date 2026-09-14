@@ -8,10 +8,8 @@
 	godhead = /datum/patron/divine/astrata
 
 /datum/faith/divine/kazengun
-	name = "Heavenly Court"
-	desc = "A sacred hierarchy of ten deities who hold rightful authority in Heaven. East Kazengunites see the Ten as successors of SAIDON, \
-	bearers of His legacy who teach mortals how to live righteously. Virtuous souls are believed to reincarnate in greater bodies, while those who sin and defile \
-	shall be reduced to the mindless bodies of animals."
+	name = "Heavenly Spirits"
+	desc = "Ten sacred spirits who hold rightful authority. East Kazengunites see the Ten as personified aspects of the world."
 	worshippers = "East Kazengunites."
 	godhead = /datum/patron/divine/noc/kazengun
 

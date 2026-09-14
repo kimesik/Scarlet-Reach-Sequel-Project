@@ -37,8 +37,8 @@
 	region_title = "Trethewey"
 
 /datum/virtue/origin/grenzelhoft
-	name = "Grenzelhoft"
-	desc = "I originate from the dark boreal woods of Grenzelhoft, the birthplace of humanity. The Empire has a long history of conflict with Otava. Long live emperor Kovel II!"
+	name = "Grenzelhoftian Empire"
+	desc = "I originate from the woods of Grenzelhoft, the heart of the Divine Pantheon. The Empire is at war with Otava."
 	origin_title = "Grenzelhoft"
 	origin_language = /datum/language/grenzelhoftian
 	restricted = TRUE
@@ -50,15 +50,20 @@
 				/datum/species/akula,
 				/datum/species/lamia
 )
-	origin_desc = "Believed to be the birthplace of humanity, the Grenzelhoft region is steeped in tradition and history.<br> Loosely organized under Emperor Kövel II, the \
-	Grenzelhoft Empire once spanned all the way from the Hammerhold mountains to the Southern Sea. Its current state is far smaller, reduced to a decentralized body of \
-	principalities which vie for control over the Imperial electorate.<br> Grenzelhoft is unique in that it maintains a professional army, funded by contracting its soldiers \
-	out as imperial mercenaries during peacetime. The Empire has a long history of conflict with Otava, though recent decades have finally seen a tentative peace between \
-	the two powers."
+	origin_desc = "Grenzelhoft is a massive realm to the west of Otava, covered by temperate forests and plains. It's the first polity to form after the collapse of the Celestial Empire, \
+	primarily controlled by the imperial dynasty of Holstein and its cadet branches, with local nobles holding a relatively small amount of power. \
+	Currently, it's engaged in an on-again-off-again war against Otava over land disputes. \
+	<br><br>\
+	Grenzelhoftians are known for sour cuisine, strong martial traditions and the only professional standing army on the continent, composed of volunteers and non-hereditary nobles. \
+	But many in Otava consider Grenzelhoftians uncouth and uneducated. \
+	<br><br>\
+	Most Grenzelhoftians, at least nominally, worship Astrata and consider their realm a living example of her Perfect Order. It is also the birthplace of the Holy See and the Inquisition, \
+	with many pilgrims visiting the Empire and its holy sites yearly. Aside from Astrata, Noc, Eora, Ravox, Necra, Pestra and Malum are also widely worshipped, but worship of Dendor, Abyssor and Xylix is frowned upon if allowed. \
+	Worshippers of PSYDON and the Four are persecuted and arrested if found, but well-hidden Zizoist cults persist and infiltrate many layers of the Grenzelhoftian society."
 
 /datum/virtue/origin/etrusca
-	name = "Etrusca"
-	desc = "I originate from tropical Etrusca, an archipelago of maritime city-states located off the eastern coast of Otava. Skilled traders and sailors, Etruscans have probably rubbed shoulders (or other parts) with more races than most humens know exist."
+	name = "Etruscan City-States"
+	desc = "I originate from tropical Etrusca, an archipelago of maritime city-states located off the eastern coast of Otava. Skilled traders and sailors, Etruscans have probably rubbed shoulders with more races than most mortals know exist."
 	origin_title = "Etrusca"
 	origin_language = /datum/language/etruscan
 	restricted = TRUE
@@ -68,31 +73,39 @@
 				/datum/species/halforc,
 				/datum/species/goblinp
 )
-	origin_desc = "An archipelago of maritime city-states located off the eastern coast of the Otavan countryside.<br> Etrusca is not one unified state, existing instead as \
-	many different polities, each with their own regional traditions and dialects. Etruscans are known for their seafaring technology and typically make for strong \
-	sailors, but many Etruscans are also unafraid to raise the black flag and turn to piracy, resulting in a reputation that is dubious at best."
+	origin_desc = "An archipelago of maritime city-states located off the eastern coast of the Otavan countryside.<br> \
+	Etrusca is not one unified state, existing instead as many different polities, with shared origins, but each with their own regional traditions, laws and dialects. \
+	<br><br>\
+	Etruscans are known for their advanced seafaring technology, extensive commercial laws and great interest in other races and cultures, but they are equally infamous for piracy and trickery. \
+	<br><br>\
+	Abyssor is the most widely worshipped deity in Etrusca, followed by Matthios and Xylix. There's also a prominent minority of Eorans. Worship of PSYDON is allowed and accepted but rare, \
+	meanwhile worship of the Four is shunned and forbidden, but not actively persecuted, in part thanks to Matthiosite merchants paying and doing a lot to keep the Astratan Inquisition out of Etrusca."
 
 /datum/virtue/origin/otava
-	name = "Otava"
-	desc = "I originate from the gently rolling hills of Otava, a religious union of duchies and counties who answer to the Patriarch of the Otavan Archdiocese."
+	name = "Otavan Sovereignty"
+	desc = "I originate from the gently rolling hills of Otava, a kingdom with its origins in PSYDON's Pantocratorate. The Sovereignty is at war with Grenzelhoft."
 	origin_title = "Otava"
 	origin_language = /datum/language/otavan
 	restricted = TRUE
-	races = list(/datum/species/golem/metal,
-				/datum/species/elf/sun,
+	races = list(/datum/species/elf/sun,
 				/datum/species/halforc,
 				/datum/species/goblinp
 )
-	origin_desc = "A religious union of duchies and counties who answer to the Patriarch of the Otavan Archdiocese.<br> Otava is a deeply devout country and exists as a \
-	Psydonian theocracy. It's most famous for its winemaking and textile industries, as well as its rich culture and cuisine. The Otavan countryside is well-known for \
-	its idyllic landscape and warm climate. However, Otavan society is deeply feudalistic, with serfdom rigidly enforced among its people. Otava technically abolished \
-	slavery centuries ago during the Psydonian Renewal, but lasting effects can still be seen in Otavan society.<br> While Otava is populated by all manner of races, the \
-	blue-blooded dark elves enjoy a uniquely privileged position in Otavan society, and were among the first groups of people to adopt Psydonian worship during its \
-	revival in the schism.<br> The unsanctioned use of magic is illegal in Otava, punishable by branding and the removal of one's tongue."
+	origin_desc = "An ancient kingdom located amongst hills and knolls, which traces its origin to the Pantocratorate. Despite its secular status, \
+	in reality the Otavan Orthodoxy has a large amount of power and influence in the realm, \
+	with many outside scholars calling the Patriarch of Otava a gray eminence and true power behind the Otavan Throne, \
+	and some even accusing of the Orthodoxy fuelling and motivating the war between Otava and Grenzelhoft. \
+	<br><br>\
+	Otavans are known for their winemaking, scandalous literature, fine dining and nobility's convoluted and archaic traditions and rules. \
+	But many in Grenzelhoft consider Otavans decadent and gluttonous. \
+	<br><br>\
+	Otava is almost exclusively Psydonic, with worship of the Ten and the Four banned and vigorously persecuted by government-sponsored bounty hunters and the Orthodoxy's Witchfinders. \
+	Despite this, however, Otavan nobility is heavily infiltrated and corrupted by Baothan cults and Noccian extremists who work to tear each other and the Orthodoxy down. \
+	It's also suspected that several Necran death cults operate out of Otava, ignored by the Orthodoxy due to their aid in hunting traitors, heretics and the profane inside the kingdom."
 
 /datum/virtue/origin/racial/gronn
-	name = "Gronn"
-	desc = "I originate from the brisk grasslands of Gronn, a tribal confederation of northmen and half-orcs nestled in the Skol River Valley. Gronnic culture is fierce, martial and vengeful, and blood feuds still split the clans to this day."
+	name = "Gronnic Highlands"
+	desc = "I originate from the cold highlands of Gronn, a loose alliance of tribes and clans nestled in the Skol River Valley. Gronnic culture is fierce, martial and vengeful, and blood feuds still split the clans to this day."
 	origin_title = "Gronn"
 	origin_language = /datum/language/gronnic
 	races = list(/datum/species/halforc,
@@ -105,26 +118,29 @@
 				/datum/species/anthromorph,
 				/datum/species/ogre
 )
-	origin_desc = "A tribal confederation of northmen and half-orcs nestled in the Skol River Valley.<br> Centuries of war between humen and orcs have stained these grassy \
-	plains, but a shaky peace was eventually brought when the half-orc warlord Gronn used a clever mix of force and diplomacy to unite the people of the valley into one \
-	loose confederation. Many years after the warlord's death, the League still remains, though it is still prone to constant small-scale internal conflict. At the same \
-	time, the skirmishes between these loosely-aligned tribes has brought its own form of assimilation.<br> Full-blooded orcs are exceedingly rare in the modern day, and it \
-	is not uncommon in Gronn to see half-orcs and humens living in coexistence. The region is a vital source of salt, iron, and timber, and is known for a love of \
-	fermented foods and strong, bitter liquor."
+	origin_desc = "An alliance of northmen, orcs and goblins nestled in the Skol River Valley, bound together by shared hatred for other nations and mutual interest in plundering them. \
+	The Gronnic Highlands and Hammerhold were once one people, but when High King Harlon began to unite tribes of the land, he was opposed by fiercely independent sea raiders of the north, \
+	led by Chieftain Gronn and Great Shaman Stygh. The war ended in a magical cataclysm which scorched a whole stripe of land, becoming a factual and formal border between Gronns and Hammerholdians. \
+	<br><br>\
+	Gronns are infamous for vengeful but honest attitudes and frequent raids into other nations. Their culture elevates martial prowess and kinship and strongly disapproves of \
+	cowardice and laziness. \
+	<br><br>\
+	Gronns worship the Great Beasts, their ancestral religion, which many modern Gronns equate with the Four Ascendants. There are also sizeable Dendorite and Abyssorite minorities, but other gods of the Pantheon \
+	are not worshipped by anyone but thralls and foreigners. Worship of other deities is not forbidden, but widely considered shameful for Gronns."
 
 /datum/virtue/origin/racial/gronn/New()
 	. = ..()
 	uniquefaith = GLOB.gronnfaith
 
 /datum/virtue/origin/racial/gronn/wastes
-	name = "Gronn - Stygian Wastes"
+	name = "Gronnic Highlands - Stygian Wastes"
 	region_title = "Stygian Wastes"
-	desc = "I originate from the terrifying Stygian Wastes, a region of Gronn heavily scarred by Arcyne warfare. Infernals prowl the burning wasteland, clawing forth from cracks in the broken earth."
+	desc = "I originate from the terrifying Stygian Wastes, a region between Gronn and Hammerhold immolated by Great Shaman Stygh's powerful spells. Magical creatures prowl the burning wasteland, clawing forth from cracks in the broken earth."
 	origin_desc = null
 
 /datum/virtue/origin/raneshen
-	name = "Raneshi"
-	desc = "I originate from the lush valleys and harsh badlands of Raneshen. Home to the zealous sun elves, the region sits at the gateway between the East and West. Recently engulfed in a violent holy war between the followers of the Old God and the divine Justiciars of Astrata."
+	name = "Raneshen Emirates"
+	desc = "I originate from the savannas and shrublands of Raneshi. Home to the zealous sun elves, the region sits at the arid eastern edge of the continent."
 	origin_title = "Raneshi"
 	origin_language = /datum/language/celestial
 	restricted = TRUE
@@ -139,16 +155,19 @@
 				/datum/species/dracon,
 				/datum/species/harpy
 )
-	origin_desc = "Home to the zealous Sun Elves, the region of Raneshen sits at the gateway between the East and West. Its lands were once ruled by Dominion of the Sun, \
-	a religious Elven ethnostate who worshipped Astrata and Astrata only. Known for its brutal treatment of lesser races, the Dominion met its end at the hands of a \
-	Psydonite slave rebellion half a century ago. It was fractured into several Elven successor states, each one claiming the legacy of the ancient Dominion, while human-led kingdoms \
-	and rebel groups still vie for control over the region. Raneshen remains a hotbed of religious and ethnic conflict, and many refugees have fled to the West seeking sanctuary \
-	— or hoping to bring their holy war along with them. The region itself is known for lush river-valleys, with lethally-hot deserts and harsh, rocky badlands forming natural borders. \
-	Most trade from Kazengun and Naledi flows through Raneshen, and Ranesheni merchants are said to be just as vicious as the Solar Justiciars."
+	origin_desc = "Once the heart and intellectual center of the Celestial Empire, after the collapse Raneshi was reduced to bickering emirates ruled by the surviving sun elven academic and military elite. \
+	Eventually, those divided realms made the Agreement, becoming a confederation led by a wazir elected by emirs. \
+	<br><br>\
+	Raneshens are known for their hospitality, intellectualism and very high literacy rates. However, slavery is prominent in the region, with many of slaves purchased from dark elves and Gronn raiders, \
+	which causes foreigners to perceive Raneshens as untrustworthy, insidious and cruel. \
+	<br><br>\
+	Raneshens almost exclusively worship Astrata, although most cities harbour secret societies of Noccian scholars and archeologists. The Emirates don't recognize the Pantheon or authority of the Grenzelhoftian Holy See, \
+	but are willing to work with the Inquisition to combat internal threats in form of Matthiosite warbands and Graggarite cultists"
 
 /datum/virtue/origin/naledi
 	name = "Naledi"
-	desc = "I originate from the sandy dunes of Naledi, known for its mages and scholars. Its people keep to the traditions of the Old God, even in the empire's dying age."
+	desc = "I originate from the deserts and savannas of Naledi, a distant region known for its magicians and refugees. Baotha destroyed Naledi's government in a storm \
+	of decadence, rampant spellcasting and violence, but its people remain."
 	origin_title = "Naledi"
 	origin_language = /datum/language/celestial
 	restricted = TRUE
@@ -165,14 +184,20 @@
 				/datum/species/harpy,
 				/datum/species/tieberian
 )
-	origin_desc = "When the Tennite faith first swept through the world many centuries ago, the people of Naledi were left entirely untouched.<br> Though knowledge of PSYDON \
-	had faded under Astrata's eye, for the Naledi people, the traditions of the Old God have remained alive and well since the dawn of time - a fact that their libraries \
-	have carefully recorded. The Naledi are poorly known to the West, and most travelers from the region come as traders or scholars. What is known is that the region is \
-	rich in gold, and that its people look to the stars for divine knowledge of our world.<br> It is rumored that the Naledi Emir is over five hundred years old, owing his \
-	long lifespan to closely-guarded alchemical secrets."
+	origin_desc = "Naledi was once a province of the Celestial Empire, but then its mostly Psydonic population waged a war against the capital, \
+	achieving independence and building close ties with the Pantocratorate. About one dozen years ago, Baotha and her disciples thoroughly corrupted \
+	Naledi's ruling dynasty, setting up the realm for a bloody civil war that destroyed Naledi as a nation-state, leaving its people scattered and divided. \
+	Naledian refugees are a depressingly common sight in the present times. \
+	<br><br>\
+	Naledians are known for their spirituality, curiosity, magical aptitude and independence, with their culture placing an emphasis on seeking greater truths and \
+	achieving a better understanding of the world. However, many of them also harbour in their hearts a deep-seated sorrow or even rage. \
+	<br><br>\
+	Most Naledians worship PSYDON, though reject the Orthodoxy and its dogma, considering one's faith to be a personal journey. They are tolerant of those who follow deities of the Pantheon, \
+	but fiercely despise the Four and see them as the Devil's servants rather than mortals who ascended into godhood. Nonetheless, it's not uncommon to hear of Naledians who fell to Zizo, \
+	hoping to restore their devastated homeland to its former glory using magic and power of undeath."
 
 /datum/virtue/origin/kazengun
-	name = "Kazengun - East"
+	name = "Kazengun - Eastern Shogunate"
 	desc = "I originate from the archipelago of Kazengun, a region also known as East Kazengun, and to the continent dwellers often associated with the whole Kazengun."
 	origin_title = "Kazengun"
 	origin_language = /datum/language/kazengunese
@@ -183,15 +208,41 @@
 				/datum/species/moth,
 				/datum/species/dwarf/mountain
 )
+	origin_desc = "Kazengun is a nation in a state of prolonged civil war, split between the Eastern Shogunate, led by Grand Empress Shu Hata and Shogun Makoto Zhuge, and the Western Republic, led by the Council of Five. \
+	The civil war caused by a long period of turmoil and feudal conflicts, leading to a great decrease in commoners' quality of life. \
+	The downtrodden and the starving across the nation were rallied by five wandering warrior-monks who formed the first Council of Five, and led them in a surprise attack against the Emperor's palace, \
+	unprepared for withstanding a massive assault from without and within. The Emperor and most of his family were slain, his daughter the sole survivor, rescued by imperial bodyguards. \
+	<br><br>\
+	The Shogunate stands with Grand Empress Shu Hata, but it is de facto led and ruled by Shogun Makoto Zhuge, her late father's chief bodyguard. \
+	Easterners, also known as Islanders, seek to preserve Hata Dynasty's rule and put an end not only to the peasant rebellion, but also to feudal conflicts. \
+	They particularly value staying true to traditions and preserving harmony across different social classes. The backbone of Easterners is composed of \
+	government officials, landowner-warriors, shrine clergy and city dwellers. \
+	<br><br>\
+	Kazengunites had a privilege of getting to meet and get acquainted with all ten deities of the Pantheon early in their history, forming an unique decentralized religion \
+	where the Ten are revered as powerful spirits. Worship of SAIDON is also accepted, but relatively rare amongst Islanders, while any reveration or worship of the Four is officially forbidden."
 
 /datum/virtue/origin/kazengun/New()
 	. = ..()
 	uniquefaith = GLOB.kazfaith
 
 /datum/virtue/origin/kazengun/china
-	name = "Kazengun - West"
+	name = "Kazengun - Western Republic"
 	region_title = "West Kazengun"
 	desc = "I originate from the mainland of Kazengun, also known as West Kazengun, a far less known region to the continent dwellers."
+	origin_desc = "Kazengun is a nation in a state of prolonged civil war, split between the Eastern Shogunate, led by Grand Empress Shu Hata and Shogun Makoto Zhuge, and the Western Republic, led by the Council of Five. \
+	The civil war caused by a long period of turmoil and feudal conflicts, leading to a great decrease in commoners' quality of life. \
+	The downtrodden and the starving across the nation were rallied by five wandering warrior-monks who formed the first Council of Five, and led them in a surprise attack against the Emperor's palace, \
+	unprepared for withstanding a massive assault from without and within. The Emperor and most of his family were slain, his daughter the sole survivor, rescued by imperial bodyguards. \
+	<br><br>\
+	The Republic stands with the commonfolk, led by the Council of Five who are elected by provinces every 10 years. \
+	Westerners, also known as Mainlanders, seek to completely overthrow Hata Dynasty and establish a democratic, classless republic. \
+	They particularly value spirituality, justice and honesty. The backbone of Westerners is composed of \
+	peasants, the poor, wandering vigilantes, magicians, mystics and deserters. \
+	<br><br>\
+	Unlike Easterners, Westerners follow a non-theistic religion colloquially known as \"the Way\". They believe that gods have forced mortals into a cycle of reincarnations, \
+	but via seeking different life experiences and undergoing a kind of spiritual awakening it's possible to break free and become an enlightened celestial being. \
+	This faith was initially popular only amongst hermit monks and magicians, but the rebellion and the perceived inaction of the Ten caused many on the mainland to convert. \
+	When Western Kazengunites learned of the Four Transcendents from the continent, it only further fuelled the fire of their uprising."
 
 /datum/virtue/origin/hammerhold
 	name = "Hammerhold"
